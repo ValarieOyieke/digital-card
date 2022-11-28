@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Card</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d197e896af.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="./app.js" async defer></script>
   </head>
   <body>
@@ -14,7 +18,36 @@
       <div class="sidebar-container"></div>
 
       <!-- DIGITAL CARD GOES HERE -->
-      <div class="card-container"></div>
+      <div class="card-container">
+        <!-- profile image -->
+        <img src="./assets/images/user.png" id="profile-image" alt="profile" />
+
+        <!-- name -->
+        <h1 id="display-name">your name</h1>
+        <!-- profession -->
+        <h2 id="display-profession">your profession</h2>
+        <!-- links -->
+        <div class="links-container">
+          <a target="_blank" id="fb-link"
+            ><i class="fa-brands fa-facebook fa-3x"></i
+          ></a>
+          <a target="_blank" id="twitter-link"
+            ><i class="fa-brands fa-twitter fa-3x"></i
+          ></a>
+          <a target="_blank" id="insta-link"
+            ><i class="fa-brands fa-square-instagram fa-3x"></i
+          ></a>
+          <a target="_blank" id="linkedin-link"
+            ><i class="fa-brands fa-linkedin fa-3x"></i
+          ></a>
+          <a target="_blank" id="email-link"
+            ><i class="fa-solid fa-envelope fa-3x"></i
+          ></a>
+          <a target="_blank" id="youtube-link"
+            ><i class="fa-brands fa-youtube fa-3x"></i
+          ></a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
