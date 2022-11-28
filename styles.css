@@ -29,13 +29,14 @@
   align-items: center;
 }
 
-.profile-image {
+#profile-image {
   height: 10vw;
   width: 10vw;
   border-radius: 100%;
+  border: 5px solid #118ab2;
 }
 
-.display-name {
+#display-name {
   font-size: 3em;
   text-transform: capitalize;
   margin-top: 20px;
@@ -43,7 +44,7 @@
   text-align: center;
 }
 
-.display-profession {
+#display-profession {
   font-size: 1.5em;
   text-transform: capitalize;
   margin-top: 5px;
