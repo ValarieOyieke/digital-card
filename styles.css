@@ -103,7 +103,8 @@ input {
   margin-bottom: 0.75em;
 }
 
-input[type="text"]{
+input[type="text"],
+input[type="email"]{
   padding: 0.4em;
   width: 100%;
 }
