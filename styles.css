@@ -1,7 +1,12 @@
 * {
-  padding: o;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.9rem;
 }
 
 .main-container {
@@ -66,4 +71,79 @@
 .links-container > a {
   margin: 5px 20px;
   color: #118ab2;
+}
+
+
+/* SIDEBAR CSS*/
+
+.title {
+  font-size: 1.2rem;
+  color: #2b2d42;
+  margin-bottom: 0.12em;
+}
+
+.sidebar-container {
+  width: 100%;
+  max-width: 280px;;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: 1px solid slategray;
+  padding: 0.75em 3em;
+}
+
+input,button {
+  font-family: 'Poppins', sans-serif;
+}
+
+input {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0.75em;
+}
+
+input[type="text"]{
+  padding: 0.4em;
+  width: 100%;
+}
+
+input[type="color"]{
+    width: 45px;
+    height: 25px;
+    padding: 3px;
+}
+
+
+input::file-selector-button {
+  font-weight: bold;
+  color: #5e548e;
+  padding: 0.4em;
+  border: thin solid grey;
+  border-radius: 3px;
+}
+
+
+label {
+  display: inline-block;
+  text-align: right;
+  align-self: center;
+}
+
+.btn {
+  align-self: center;
+  padding: 0.7em 1.2em;
+  text-transform: uppercase;
+  border:none;
+  border-radius: 20px;
+  color:antiquewhite;
+  background: #1d3557;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #264653;
+  color: whitesmoke;
 }

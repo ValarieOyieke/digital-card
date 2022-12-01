@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
     <script
       src="https://kit.fontawesome.com/d197e896af.js"
@@ -15,7 +16,58 @@
   <body>
     <div class="main-container">
       <!-- SIDEBAR GOES HERE -->
-      <div class="sidebar-container"></div>
+      <div class="sidebar-container">
+
+              <div class="sidebar-general">
+                <h1 class="title">General</h1>
+
+                <input type="file" name="file" placeholder="Choose file" aria-label="Choose file" 
+                required/>
+
+                <input type="text" name="fullName" placeholder="Full Name" aria-label="Full name" 
+                required/>
+
+            <input type="text" name="profession" placeholder="Profession" aria-label="Profession" 
+                required/>
+            </div>
+
+          <div class="sidebar-links">
+                <h1 class="title">Links</h1>
+
+                <input type="text" name="facebook" placeholder="Facebook" aria-label="Facebook link" 
+                required/>
+
+                <input type="text" name="twitter" placeholder="Twitter" aria-label="Twitter link" 
+                required/>
+
+                <input type="text" name="linkedIn" placeholder="LinkedIn" aria-label="LinkedIn link" 
+                required/>
+
+                <input type="text" name="instagram" placeholder="Instagram" aria-label="Instagram link" 
+                required/>
+
+                <input type="text" name="email" placeholder="Email" aria-label="Email address" 
+                required/>
+
+                <input type="text" name="youtube" placeholder="Youtube" aria-label="Youtube link" 
+                required/>
+          </div>
+
+          <div class="sidebar-styles">
+                <h1 class="title">Styles</h1>
+
+                <label for="cardcolor">
+                <input type="color" name="cardcolor" id="cardcolor" value="#b5838d" aria-label="card color"/>
+                Choose card color</label>
+
+                <label for="textcolor">
+                <input type="color" name="textcolor" id="textcolor" value="#6d6875" aria-label="text color"/>
+                Choose text color</label>
+          </div>
+
+            <button class="btn">Get your card</button>
+
+      </div>
 
       <!-- DIGITAL CARD GOES HERE -->
       <div class="card-container">
