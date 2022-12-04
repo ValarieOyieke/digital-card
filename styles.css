@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'Libre Baskerville', serif;
+body {
+  font-family: "Libre Baskerville", serif;
   font-size: 0.9rem;
 }
 
@@ -73,7 +73,6 @@ body{
   color: #118ab2;
 }
 
-
 /* SIDEBAR CSS*/
 
 .title {
@@ -84,7 +83,7 @@ body{
 
 .sidebar-container {
   width: 100%;
-  max-width: 280px;;
+  max-width: 280px;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -92,8 +91,9 @@ body{
   padding: 0.75em 3em;
 }
 
-input,button {
-  font-family: 'Poppins', sans-serif;
+input,
+button {
+  font-family: "Poppins", sans-serif;
 }
 
 input {
@@ -104,17 +104,16 @@ input {
 }
 
 input[type="text"],
-input[type="email"]{
+input[type="email"] {
   padding: 0.4em;
   width: 100%;
 }
 
-input[type="color"]{
-    width: 45px;
-    height: 25px;
-    padding: 3px;
+input[type="color"] {
+  width: 45px;
+  height: 25px;
+  padding: 3px;
 }
-
 
 input::file-selector-button {
   font-weight: bold;
@@ -123,7 +122,6 @@ input::file-selector-button {
   border: thin solid grey;
   border-radius: 3px;
 }
-
 
 label {
   display: inline-block;
@@ -135,9 +133,9 @@ label {
   align-self: center;
   padding: 0.7em 1.2em;
   text-transform: uppercase;
-  border:none;
+  border: none;
   border-radius: 20px;
-  color:antiquewhite;
+  color: antiquewhite;
   background: #1d3557;
   font-weight: 700;
   cursor: pointer;
@@ -147,4 +145,47 @@ label {
 .btn:focus {
   background: #264653;
   color: whitesmoke;
+}
+
+@media screen and (max-width: 500px) {
+  .main-container {
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  /* CARD CSS */
+
+  .card-container {
+    width: 350px;
+    margin-top: 50px;
+    order: 1;
+  }
+
+  #profile-image {
+    height: 130px;
+    width: 130px;
+  }
+
+  #display-name {
+    font-size: 2em;
+  }
+
+  #display-profession {
+    font-size: 1.2em;
+  }
+
+  /* SIDEBAR CSS*/
+
+  .title {
+    font-size: 1.2rem;
+    color: #2b2d42;
+    margin-bottom: 0.12em;
+  }
+
+  .sidebar-container {
+    order: 2;
+    margin-top: 30px;
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
 }
