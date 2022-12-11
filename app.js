@@ -39,9 +39,4 @@ function getLinks() {
     youtubeLink.href = inputYoutubeLink.value
 }
 
-getLinks()
-
-
-cardBtn.addEventListener('click', ()=>{
-    // add code   
-})
+cardBtn.addEventListener("click", getLinks);
