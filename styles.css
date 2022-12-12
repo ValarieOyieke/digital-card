@@ -19,7 +19,7 @@ body {
 
 /* CARD CSS */
 
-.card-container {
+#card-container {
   width: 45vw;
   background-color: #fff;
   height: fit-content;

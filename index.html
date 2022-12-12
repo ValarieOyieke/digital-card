@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Card</title>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <script
       src="https://kit.fontawesome.com/d197e896af.js"
@@ -17,60 +20,126 @@
     <div class="main-container">
       <!-- SIDEBAR GOES HERE -->
       <div class="sidebar-container">
+        <div class="sidebar-general">
+          <h2 class="title">General</h2>
 
-              <div class="sidebar-general">
-                <h2 class="title">General</h2>
+          <input
+            type="file"
+            name="file"
+            id="fileUpload"
+            placeholder="Choose file"
+            aria-label="Choose file"
+            required
+          />
 
-                <input type="file" name="file" id="fileUpload" placeholder="Choose file" aria-label="Choose file" 
-                required/>
+          <input
+            type="text"
+            name="fullName"
+            id="fullName"
+            placeholder="Full Name"
+            aria-label="Full name"
+            required
+          />
 
-                <input type="text" name="fullName" id="fullName" placeholder="Full Name" aria-label="Full name" 
-                required/>
+          <input
+            type="text"
+            name="profession"
+            id="profession"
+            placeholder="Profession"
+            aria-label="Profession"
+            required
+          />
+        </div>
 
-            <input type="text" name="profession" id="profession" placeholder="Profession" aria-label="Profession" 
-                required/>
-            </div>
+        <div class="sidebar-links">
+          <h2 class="title">Links</h2>
 
-          <div class="sidebar-links">
-                <h2 class="title">Links</h2>
+          <input
+            type="text"
+            name="facebook"
+            id="input-facebook-link"
+            placeholder="Facebook"
+            aria-label="Facebook link"
+            required
+          />
 
-                <input type="text" name="facebook" id="input-facebook-link" placeholder="Facebook" aria-label="Facebook link" 
-                required/>
+          <input
+            type="text"
+            name="twitter"
+            id="input-twitter-link"
+            placeholder="Twitter"
+            aria-label="Twitter link"
+            required
+          />
 
-                <input type="text" name="twitter" id="input-twitter-link" placeholder="Twitter" aria-label="Twitter link" 
-                required/>
+          <input
+            type="text"
+            name="linkedIn"
+            id="input-linkedIn-link"
+            placeholder="LinkedIn"
+            aria-label="LinkedIn link"
+            required
+          />
 
-                <input type="text" name="linkedIn" id="input-linkedIn-link" placeholder="LinkedIn" aria-label="LinkedIn link" 
-                required/>
+          <input
+            type="text"
+            name="instagram"
+            id="input-instagram-link"
+            placeholder="Instagram"
+            aria-label="Instagram link"
+            required
+          />
 
-                <input type="text" name="instagram" id="input-instagram-link" placeholder="Instagram" aria-label="Instagram link" 
-                required/>
+          <input
+            type="email"
+            name="email"
+            id="input-email-link"
+            placeholder="Email"
+            aria-label="Email address"
+            required
+          />
 
-                <input type="email" name="email" id="input-email-link" placeholder="Email" aria-label="Email address" 
-                required/>
+          <input
+            type="text"
+            name="youtube"
+            id="input-youtube-link"
+            placeholder="Youtube"
+            aria-label="Youtube link"
+            required
+          />
+        </div>
 
-                <input type="text" name="youtube" id="input-youtube-link" placeholder="Youtube" aria-label="Youtube link" 
-                required/>
-          </div>
+        <div class="sidebar-styles">
+          <h2 class="title">Styles</h2>
 
-          <div class="sidebar-styles">
-                <h2 class="title">Styles</h2>
+          <label for="card-color">
+            <input
+              type="color"
+              name="cardcolor"
+              id="card-color"
+              value="#b5838d"
+              aria-label="card color"
+            />
+            Choose card color</label
+          >
 
-                <label for="card-color">
-                <input type="color" name="cardcolor" id="card-color" value="#b5838d" aria-label="card color"/>
-                Choose card color</label>
+          <label for="text-color">
+            <input
+              type="color"
+              name="textcolor"
+              id="text-color"
+              value="#6d6875"
+              aria-label="text color"
+            />
+            Choose text color</label
+          >
+        </div>
 
-                <label for="text-color">
-                <input type="color" name="textcolor" id="text-color" value="#6d6875" aria-label="text color"/>
-                Choose text color</label>
-          </div>
-
-            <button class="btn" id="get-card-btn">Get your card</button>
-            
+        <button class="btn" id="get-card-btn">Get your card</button>
       </div>
 
       <!-- DIGITAL CARD GOES HERE -->
-      <div class="card-container">
+      <div id="card-container">
         <!-- profile image -->
         <img src="./assets/images/user.png" id="profile-image" alt="profile" />
 
