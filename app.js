@@ -56,3 +56,12 @@ textColor.addEventListener("input", (e) => {
     item.style.color = e.target.value;
   });
 });
+
+//displays the selected image
+fileUpload.onchange = ()=>{
+  let reader = new FileReader()
+  reader.readAsDataURL(fileUpload.files[0])
+  reader.onload = () => {
+    profileImage.setAttribute('src',reader.result)
+  }
+}
