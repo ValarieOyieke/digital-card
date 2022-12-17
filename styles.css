@@ -39,6 +39,7 @@ body {
   width: 10vw;
   border-radius: 100%;
   border: 5px solid #118ab2;
+  object-fit: cover;
 }
 
 #display-name {
