@@ -14,7 +14,7 @@ const textColor = document.getElementById("text-color");
 const fbLink = document.getElementById("fb-link");
 const twitterLink = document.getElementById("twitter-link");
 const linkedinLink = document.getElementById("linkedin-link");
-const instagramLink = document.getElementById("instagram-link");
+const instagramLink = document.getElementById("insta-link");
 const emailLink = document.getElementById("email-link");
 const youtubeLink = document.getElementById("youtube-link");
 const cardBtn = document.getElementById("get-card-btn");
@@ -36,8 +36,24 @@ function getLinks() {
   twitterLink.href = inputTwitterLink.value;
   linkedinLink.href = inputLinkedInLink.value;
   instagramLink.href = inputInstagramLink.value;
-  emailLink.href = inputEmailLink.value;
+  emailLink.href = `mailto:${inputEmailLink.value}`;
   youtubeLink.href = inputYoutubeLink.value;
+
+  var opt = {
+    margin: 0,
+    filename: "digitalcard.pdf",
+    image: { type: "jpeg", quality: 1 },
+    html2canvas: { scale: 1, backgroundColor: null },
+
+    jsPDF: {
+      unit: "in",
+      format: "letter",
+      orientation: "landscape",
+    },
+  };
+
+  const element = document.getElementById("card-container");
+  html2pdf().set(opt).from(element).save();
 }
 
 cardBtn.addEventListener("click", getLinks);
@@ -58,10 +74,10 @@ textColor.addEventListener("input", (e) => {
 });
 
 //displays the selected image
-fileUpload.onchange = ()=>{
-  let reader = new FileReader()
-  reader.readAsDataURL(fileUpload.files[0])
+fileUpload.onchange = () => {
+  let reader = new FileReader();
+  reader.readAsDataURL(fileUpload.files[0]);
   reader.onload = () => {
-    profileImage.setAttribute('src',reader.result)
-  }
-}
+    profileImage.setAttribute("src", reader.result);
+  };
+};
