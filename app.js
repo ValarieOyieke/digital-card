@@ -48,7 +48,7 @@ function getLinks() {
       item.href === "http://127.0.0.1:5500/index.html" ||
       item.href === "mailto:"
     )
-      if (item.href === "") item.style.display = "none";
+      item.style.display = "none";
   });
 
   var opt = {
