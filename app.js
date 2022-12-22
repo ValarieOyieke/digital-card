@@ -32,12 +32,24 @@ profession.addEventListener("input", (event) => {
 });
 
 function getLinks() {
+  icons.forEach((item) => {
+    item.style.display = "block";
+  });
+
   fbLink.href = inputFacebookLink.value;
   twitterLink.href = inputTwitterLink.value;
   linkedinLink.href = inputLinkedInLink.value;
   instagramLink.href = inputInstagramLink.value;
   emailLink.href = `mailto:${inputEmailLink.value}`;
   youtubeLink.href = inputYoutubeLink.value;
+
+  icons.forEach((item) => {
+    if (
+      item.href === "http://127.0.0.1:5500/index.html" ||
+      item.href === "mailto:"
+    )
+      if (item.href === "") item.style.display = "none";
+  });
 
   var opt = {
     margin: 0,
