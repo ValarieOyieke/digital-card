@@ -26,25 +26,15 @@ function getLinks() {
     item.style.display = "block";
   });
   
-// to be looked at
   for (let i = 0; i <inputLinks.length; i++) {
     if (!inputLinks[i].value) {
-     inputLinks[i].style.display = "none";
+        iconLinks[i].style.display = "none";
     } else if (inputLinks[i].id == "input-email-link") {
        inputLinks[i].href = `mailto:${inputLinks[i].value}`;
      } else {
         iconLinks[i].href = inputLinks[i].value;
      }
    }
-
-
-  icons.forEach((item) => {
-    if (
-      item.href === "http://127.0.0.1:5500/index.html" ||
-      item.href === "mailto:"
-    )
-      item.style.display = "none";
-  });
 
   var opt = {
     margin: 0,
