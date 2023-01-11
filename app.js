@@ -3,20 +3,10 @@ const fullName = document.getElementById("fullName");
 const profession = document.getElementById("profession");
 const displayName = document.getElementById("display-name");
 const displayProfession = document.getElementById("display-profession");
-const inputFacebookLink = document.getElementById("input-facebook-link");
-const inputTwitterLink = document.getElementById("input-twitter-link");
-const inputLinkedInLink = document.getElementById("input-linkedIn-link");
-const inputInstagramLink = document.getElementById("input-instagram-link");
-const inputEmailLink = document.getElementById("input-email-link");
-const inputYoutubeLink = document.getElementById("input-youtube-link");
+const inputLinks = document.querySelectorAll('input[type="url"], input[type="email"]')
 const cardColor = document.getElementById("card-color");
 const textColor = document.getElementById("text-color");
-const fbLink = document.getElementById("fb-link");
-const twitterLink = document.getElementById("twitter-link");
-const linkedinLink = document.getElementById("linkedin-link");
-const instagramLink = document.getElementById("insta-link");
-const emailLink = document.getElementById("email-link");
-const youtubeLink = document.getElementById("youtube-link");
+const iconLinks = document.querySelectorAll("a")
 const cardBtn = document.getElementById("get-card-btn");
 
 const cardContainer = document.getElementById("card-container");
@@ -35,13 +25,18 @@ function getLinks() {
   icons.forEach((item) => {
     item.style.display = "block";
   });
+  
+// to be looked at
+  for (let i = 0; i <inputLinks.length; i++) {
+    if (!inputLinks[i].value) {
+     inputLinks[i].style.display = "none";
+    } else if (inputLinks[i].id == "input-email-link") {
+       inputLinks[i].href = `mailto:${inputLinks[i].value}`;
+     } else {
+        iconLinks[i].href = inputLinks[i].value;
+     }
+   }
 
-  fbLink.href = inputFacebookLink.value;
-  twitterLink.href = inputTwitterLink.value;
-  linkedinLink.href = inputLinkedInLink.value;
-  instagramLink.href = inputInstagramLink.value;
-  emailLink.href = `mailto:${inputEmailLink.value}`;
-  youtubeLink.href = inputYoutubeLink.value;
 
   icons.forEach((item) => {
     if (
