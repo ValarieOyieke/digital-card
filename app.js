@@ -30,7 +30,7 @@ function getLinks() {
     if (!inputLinks[i].value) {
         iconLinks[i].style.display = "none";
     } else if (inputLinks[i].id == "input-email-link") {
-       inputLinks[i].href = `mailto:${inputLinks[i].value}`;
+        iconLinks[i].href = `mailto:${inputLinks[i].value}`;
      } else {
         iconLinks[i].href = inputLinks[i].value;
      }
