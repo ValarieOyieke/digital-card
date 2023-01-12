@@ -14,6 +14,7 @@
 - People can add their name, profession and all the social contact links.
 - This digital card can be customize by changing card and font colors.
 - You can click on Get Your Card button to download the pdf version of your card and send it to anyone.
+- Only those icons which contains social links will be present in the downloaded card.
 
 ## Screenshot
 
@@ -22,7 +23,7 @@
 
 ## Link
 
-- Live Site URL: []()
+- Live Site URL: [https://watu-digital-card.vercel.app](https://watu-digital-card.vercel.app)
 
 ## Built with
 
