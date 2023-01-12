@@ -83,7 +83,6 @@ body {
 }
 
 .sidebar-container {
-  width: 100%;
   max-width: 280px;
   display: flex;
   flex-direction: column;
@@ -156,7 +155,7 @@ label {
 
   /* CARD CSS */
 
-  .card-container {
+  #card-container {
     width: 350px;
     margin-top: 50px;
     order: 1;
