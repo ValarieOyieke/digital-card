@@ -3,10 +3,12 @@ const fullName = document.getElementById("fullName");
 const profession = document.getElementById("profession");
 const displayName = document.getElementById("display-name");
 const displayProfession = document.getElementById("display-profession");
-const inputLinks = document.querySelectorAll('input[type="url"], input[type="email"]')
+const inputLinks = document.querySelectorAll(
+  'input[type="url"], input[type="email"]'
+);
 const cardColor = document.getElementById("card-color");
 const textColor = document.getElementById("text-color");
-const iconLinks = document.querySelectorAll("a")
+const iconLinks = document.querySelectorAll("a");
 const cardBtn = document.getElementById("get-card-btn");
 
 const cardContainer = document.getElementById("card-container");
@@ -25,26 +27,26 @@ function getLinks() {
   icons.forEach((item) => {
     item.style.display = "block";
   });
-  
-  for (let i = 0; i <inputLinks.length; i++) {
+
+  for (let i = 0; i < inputLinks.length; i++) {
     if (!inputLinks[i].value) {
-        iconLinks[i].style.display = "none";
+      iconLinks[i].style.display = "none";
     } else if (inputLinks[i].id == "input-email-link") {
-        iconLinks[i].href = `mailto:${inputLinks[i].value}`;
-     } else {
-        iconLinks[i].href = inputLinks[i].value;
-     }
-   }
+      iconLinks[i].href = `mailto:${inputLinks[i].value}`;
+    } else {
+      iconLinks[i].href = inputLinks[i].value;
+    }
+  }
 
   var opt = {
     margin: 0,
     filename: "digitalcard.pdf",
-    image: { type: "jpeg", quality: 1 },
-    html2canvas: { scale: 1, backgroundColor: null },
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: { scale: 2, backgroundColor: null },
 
     jsPDF: {
       unit: "in",
-      format: "letter",
+      format: "a4",
       orientation: "landscape",
     },
   };
@@ -78,3 +80,4 @@ fileUpload.onchange = () => {
     profileImage.setAttribute("src", reader.result);
   };
 };
+cardContainer.addEventListener("click", getLinks);
